@@ -54,5 +54,18 @@ namespace TodoREST
 
 			
         }
+
+        private void RegPuntucion(object sender, ValueChangedEventArgs e)
+        {
+			var slider = sender as Slider;
+
+			int puntuacion = (int)slider.Value;
+
+			var todoItem = (TodoItem)BindingContext;
+
+			todoItem.Puntuacion = puntuacion;
+
+
+        }
     }
 }

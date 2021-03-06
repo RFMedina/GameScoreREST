@@ -13,7 +13,22 @@ namespace TodoREST
 		}
 		public string ID { get; set; }
 		public string Nombre { get; set; }
-		public int Puntuacion { get; set; }
+
+		private int puntuacion;
+		public int Puntuacion {
+			get { return puntuacion; }
+			set 
+			{
+				puntuacion = value;
+				OnPropertyChanged();
+			} 
+		}
+
+		public double Puntuacion_Double
+        {
+            get { return Convert.ToDouble(Puntuacion); }
+            set { }
+        } 
 		public string Sinopsis { get; set; }
 
 		private string fecha;

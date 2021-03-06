@@ -8,7 +8,7 @@
 		<Entry Text="{Binding Path=Nombre}" 
                Placeholder="Enter item" />
 		<Label Text="Notes" />
-		<Entry Text="{Binding Path=Puntuacion}"
+		<Entry Text="{Binding Path=Sinopsis}"
                Placeholder="Enter notes" />
 		<Label Text="Done" />
          <DatePicker x:Name="SelectorFecha"
@@ -16,8 +16,10 @@
                     Date="{Binding Path=Valor_fecha}"
                     Margin="30, 0, 0, 30"
                     DateSelected="CovertirFecha" />
-		<Switch IsToggled="{Binding Path=Done}" />
-		<Button Text="Save" 
+        <Label Text="{Binding Path=Puntuacion}" />
+        <Slider Minimum="0" Maximum="100" ValueChanged="RegPuntucion"
+                Value="{Binding Path=Puntuacion_Double}" />
+        <Button Text="Save" 
                 Clicked="OnSaveButtonClicked" />
 		<Button Text="Delete"
                 Clicked="OnDeleteButtonClicked" />

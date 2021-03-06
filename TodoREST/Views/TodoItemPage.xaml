@@ -11,6 +11,11 @@
 		<Entry Text="{Binding Path=Puntuacion}"
                Placeholder="Enter notes" />
 		<Label Text="Done" />
+         <DatePicker x:Name="SelectorFecha"
+                    MinimumDate="02, 14, 1999"
+                    Date="{Binding Path=Valor_fecha}"
+                    Margin="30, 0, 0, 30"
+                    DateSelected="CovertirFecha" />
 		<Switch IsToggled="{Binding Path=Done}" />
 		<Button Text="Save" 
                 Clicked="OnSaveButtonClicked" />

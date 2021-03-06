@@ -58,7 +58,7 @@ namespace TodoAPI.Services
                 Nombre = "Ejemplo1",
                 Puntuacion = 50,
                 Sinopsis = "Esto es una prueba",
-                Fecha = "06/21/2018",
+                Fecha = "21/01/2018",
                 Plataforma = "PC"
 
             };
@@ -69,7 +69,7 @@ namespace TodoAPI.Services
                 Nombre = "Ejemplo2",
                 Puntuacion = 50,
                 Sinopsis = "Esto es una prueba",
-                Fecha = "06/21/2018",
+                Fecha = "21/01/2018",
                 Plataforma = "PC"
 
             }; 
@@ -80,7 +80,7 @@ namespace TodoAPI.Services
                 Nombre = "Ejemplo3",
                 Puntuacion = 50,
                 Sinopsis = "Esto es una prueba",
-                Fecha = "06/21/2018",
+                Fecha = "21/02/2018",
                 Plataforma = "PC"
 
             };

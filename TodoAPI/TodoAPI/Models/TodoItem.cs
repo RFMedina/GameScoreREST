@@ -15,7 +15,6 @@ namespace TodoAPI.Models
         public int Puntuacion { get; set; }
 
         public string Sinopsis { get; set; }
-
         public string Fecha { get; set; }
         
         public string Plataforma { get; set; }

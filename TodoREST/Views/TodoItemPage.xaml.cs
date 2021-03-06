@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Xamarin.Forms;
 
 namespace TodoREST
@@ -7,7 +8,7 @@ namespace TodoREST
 	{
 		bool isNewItem;
 
-		public TodoItemPage (bool isNew = false)
+        public TodoItemPage (bool isNew = false)
 		{
 			InitializeComponent ();
 			isNewItem = isNew;
@@ -31,5 +32,27 @@ namespace TodoREST
 		{
 			await Navigation.PopAsync ();
 		}
-	}
+
+        private void CovertirFecha(object sender, DateChangedEventArgs e)
+        {
+			var selector = sender as DatePicker;
+
+			DateTime fecha = selector.Date;
+
+			var todoItem = (TodoItem)BindingContext;
+
+			//Recogemos la fecha dependiendo del idioma del dispositivo
+			if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")
+            {
+				todoItem.Fecha = fecha.ToString("MM/dd/yyyy");
+			}
+
+			if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "es")
+            {
+				todoItem.Fecha = fecha.ToString("dd/MM/yyyy");
+			}
+
+			
+        }
+    }
 }

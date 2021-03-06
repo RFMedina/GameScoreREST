@@ -80,7 +80,7 @@ namespace TodoREST
             {
 				if(puntuacion < 75)
                 {
-					todoItem.Puntuacion_Color = "Yellow";
+					todoItem.Puntuacion_Color = "Orange";
                 }
                 else
                 {
@@ -89,5 +89,41 @@ namespace TodoREST
             }
 
         }
+
+        private void PlataformaSelec(object sender, EventArgs e)
+        {
+			var selector = sender as Picker;
+
+			int indice = selector.SelectedIndex;
+
+			var todoItem = (TodoItem)BindingContext;
+
+			//Para PC
+			if(indice == 0)
+            {
+				todoItem.Plataforma_Img = "Assets/PClogo.png";
+
+			}
+
+			//Para Xbox
+			if (indice == 1)
+			{
+				todoItem.Plataforma_Img = "Assets/XboxLogo.png";
+
+			}
+			//Para PlayStation
+			if (indice == 2)
+			{
+				todoItem.Plataforma_Img = "Assets/PSLogo.png";
+
+			}
+
+			//Para Switch
+			if (indice == 3)
+			{
+				todoItem.Plataforma_Img = "Assets/NSLogo.png";
+
+			}
+		}
     }
 }

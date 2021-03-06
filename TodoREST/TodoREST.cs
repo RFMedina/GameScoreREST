@@ -11,7 +11,7 @@ namespace TodoREST
 		public App ()
 		{
 			TodoManager = new TodoItemManager (new RestService ());
-            Device.SetFlags(new string[] { "Shapes_Experimental" });
+            //Device.SetFlags(new string[] { "Shapes_Experimental" });
 			MainPage = new NavigationPage (new TodoListPage ());
 		}
 

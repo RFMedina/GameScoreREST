@@ -59,5 +59,7 @@ namespace TodoREST
             set { }
         }
 		public string Plataforma { get; set; }
+
+		public string Plataforma_Img { get; set; }
 	}
 }

@@ -16,6 +16,14 @@
                     Date="{Binding Path=Valor_fecha}"
                     Margin="30, 0, 0, 30"
                     DateSelected="CovertirFecha" />
+        <Picker SelectedItem="{Binding Path=Plataforma}" SelectedIndexChanged="PlataformaSelec">
+            <Picker.Items>
+                    <x:String>PC</x:String>
+                    <x:String>Xbox</x:String>
+                    <x:String>PlayStation</x:String>
+                    <x:String>Switch</x:String>
+                </Picker.Items>
+        </Picker>
         <Label Text="{Binding Path=Puntuacion}" />
         <Slider Minimum="0" Maximum="100" ValueChanged="RegPuntucion"
                 Value="{Binding Path=Puntuacion_Double}" />

@@ -20,6 +20,7 @@ namespace TodoAPI.Models
         public string Fecha { get; set; }
         
         public string Plataforma { get; set; }
+        public string Plataforma_Img { get; set; }
 
     }
 }

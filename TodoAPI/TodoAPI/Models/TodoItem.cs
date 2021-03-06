@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace TodoAPI.Models
 {
@@ -8,11 +9,16 @@ namespace TodoAPI.Models
         public string ID { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Nombre { get; set; }
 
         [Required]
-        public string Notes { get; set; }
+        public int Puntuacion { get; set; }
 
-        public bool Done { get; set; }
+        public string Sinopsis { get; set; }
+
+        public string Fecha { get; set; }
+        
+        public string Plataforma { get; set; }
+
     }
 }

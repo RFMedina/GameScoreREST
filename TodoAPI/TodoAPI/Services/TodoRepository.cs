@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TodoAPI.Interfaces;
 using TodoAPI.Models;
@@ -54,25 +55,34 @@ namespace TodoAPI.Services
             var todoItem1 = new TodoItem
             {
                 ID = "6bb8a868-dba1-4f1a-93b7-24ebce87e243",
-                Name = "Learn app development",
-                Notes = "Take Microsoft Learn Courses",
-                Done = true
-            };
+                Nombre = "Ejemplo1",
+                Puntuacion = 50,
+                Sinopsis = "Esto es una prueba",
+                Fecha = "06/21/2018",
+                Plataforma = "PC"
 
+            };
+            
             var todoItem2 = new TodoItem
             {
                 ID = "b94afb54-a1cb-4313-8af3-b7511551b33b",
-                Name = "Develop apps",
-                Notes = "Use Visual Studio and Visual Studio for Mac",
-                Done = false
-            };
+                Nombre = "Ejemplo2",
+                Puntuacion = 50,
+                Sinopsis = "Esto es una prueba",
+                Fecha = "06/21/2018",
+                Plataforma = "PC"
+
+            }; 
 
             var todoItem3 = new TodoItem
             {
                 ID = "ecfa6f80-3671-4911-aabe-63cc442c1ecf",
-                Name = "Publish apps",
-                Notes = "All app stores",
-                Done = false,
+                Nombre = "Ejemplo3",
+                Puntuacion = 50,
+                Sinopsis = "Esto es una prueba",
+                Fecha = "06/21/2018",
+                Plataforma = "PC"
+
             };
 
             _todoList.Add(todoItem1);

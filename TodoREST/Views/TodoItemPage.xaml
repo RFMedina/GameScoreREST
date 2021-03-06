@@ -5,10 +5,10 @@
 			 Title="Todo">
 	<StackLayout Margin="20">
 		<Label Text="Name" />
-		<Entry Text="{Binding Path=Name}" 
+		<Entry Text="{Binding Path=Nombre}" 
                Placeholder="Enter item" />
 		<Label Text="Notes" />
-		<Entry Text="{Binding Path=Notes}"
+		<Entry Text="{Binding Path=Puntuacion}"
                Placeholder="Enter notes" />
 		<Label Text="Done" />
 		<Switch IsToggled="{Binding Path=Done}" />

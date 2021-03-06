@@ -21,10 +21,10 @@
                     <StackLayout Padding="20,0,0,0" 
                                  HorizontalOptions="StartAndExpand"
                                  Orientation="Horizontal">
-                        <Label Text="{Binding Name}" 
+                        <Label Text="{Binding Nombre}" 
                                VerticalTextAlignment="Center" />
-                        <Image Source="check.png" 
-                               IsVisible="{Binding Done}" />
+                        <Label 
+                               Text="{Binding Puntuacion}" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

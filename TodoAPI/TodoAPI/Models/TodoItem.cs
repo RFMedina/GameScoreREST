@@ -14,6 +14,8 @@ namespace TodoAPI.Models
         [Required]
         public int Puntuacion { get; set; }
 
+        public string Puntuacion_Color { get; set; }
+
         public string Sinopsis { get; set; }
         public string Fecha { get; set; }
         

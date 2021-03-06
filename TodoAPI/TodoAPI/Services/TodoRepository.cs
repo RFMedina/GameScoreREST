@@ -57,6 +57,7 @@ namespace TodoAPI.Services
                 ID = "6bb8a868-dba1-4f1a-93b7-24ebce87e243",
                 Nombre = "Ejemplo1",
                 Puntuacion = 50,
+                Puntuacion_Color ="Yellow",
                 Sinopsis = "Esto es una prueba",
                 Fecha = "21/01/2018",
                 Plataforma = "PC"
@@ -68,6 +69,7 @@ namespace TodoAPI.Services
                 ID = "b94afb54-a1cb-4313-8af3-b7511551b33b",
                 Nombre = "Ejemplo2",
                 Puntuacion = 50,
+                Puntuacion_Color = "Yellow",
                 Sinopsis = "Esto es una prueba",
                 Fecha = "21/01/2018",
                 Plataforma = "PC"
@@ -79,6 +81,7 @@ namespace TodoAPI.Services
                 ID = "ecfa6f80-3671-4911-aabe-63cc442c1ecf",
                 Nombre = "Ejemplo3",
                 Puntuacion = 50,
+                Puntuacion_Color = "Yellow",
                 Sinopsis = "Esto es una prueba",
                 Fecha = "21/02/2018",
                 Plataforma = "PC"

@@ -18,14 +18,26 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Padding="20,0,0,0" 
-                                 HorizontalOptions="StartAndExpand"
-                                 Orientation="Horizontal">
-                        <Label Text="{Binding Nombre}" 
+                    <Grid ColumnDefinitions="Auto, Auto, 3*"
+                          RowDefinitions="Auto, Auto, 5* "
+                          Padding="20,0,0,0" 
+                          HorizontalOptions="StartAndExpand">
+                        
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Nombre}" 
                                VerticalTextAlignment="Center" />
-                        <Label 
-                               Text="{Binding Puntuacion}" />
-                    </StackLayout>
+
+                        
+
+                        <Frame CornerRadius="5"  Grid.Row="0" Grid.RowSpan="1" Grid.Column="2"
+                                BackgroundColor="{Binding Puntuacion_Color}"
+                               Padding="0" >
+                            <Label Text="{Binding Puntuacion}" FontSize="Large" TextColor="White"/>
+                        </Frame>
+
+
+
+
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

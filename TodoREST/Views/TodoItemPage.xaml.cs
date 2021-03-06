@@ -65,6 +65,28 @@ namespace TodoREST
 
 			todoItem.Puntuacion = puntuacion;
 
+			Color(puntuacion, todoItem);
+
+
+        }
+
+		private void Color(int puntuacion, TodoItem todoItem)
+        {
+			if(puntuacion < 50)
+            {
+				todoItem.Puntuacion_Color = "Red";
+            }
+            else
+            {
+				if(puntuacion < 75)
+                {
+					todoItem.Puntuacion_Color = "Yellow";
+                }
+                else
+                {
+					todoItem.Puntuacion_Color = "Green";
+                }
+            }
 
         }
     }

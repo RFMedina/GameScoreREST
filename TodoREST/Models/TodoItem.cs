@@ -28,7 +28,16 @@ namespace TodoREST
         {
             get { return Convert.ToDouble(Puntuacion); }
             set { }
-        } 
+        }
+		private string color;
+		public string Puntuacion_Color { 
+			get { return color; }
+			set 
+			{
+				color = value;
+				OnPropertyChanged();
+			} 
+		}
 		public string Sinopsis { get; set; }
 
 		private string fecha;

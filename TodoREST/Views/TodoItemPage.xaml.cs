@@ -101,27 +101,27 @@ namespace TodoREST
 			//Para PC
 			if(indice == 0)
             {
-				todoItem.Plataforma_Img = "Assets/PClogo.png";
+				todoItem.Plataforma_Img = "PClogo.png";
 
 			}
 
 			//Para Xbox
 			if (indice == 1)
 			{
-				todoItem.Plataforma_Img = "Assets/XboxLogo.png";
+				todoItem.Plataforma_Img = "XboxLogo.png";
 
 			}
 			//Para PlayStation
 			if (indice == 2)
 			{
-				todoItem.Plataforma_Img = "Assets/PSLogo.png";
+				todoItem.Plataforma_Img = "PSLogo.png";
 
 			}
 
 			//Para Switch
 			if (indice == 3)
 			{
-				todoItem.Plataforma_Img = "Assets/NSLogo.png";
+				todoItem.Plataforma_Img = "NSLogo.png";
 
 			}
 		}

@@ -35,5 +35,5 @@ namespace TodoREST
                 BindingContext = e.SelectedItem as TodoItem
             });
 		}
-	}
+    }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
 			 x:Class="TodoREST.TodoItemPage" 
 			 Title="{Binding Nombre}">
 	
@@ -38,6 +39,7 @@
                     <Label Text="Fecha de lanzamiento" HorizontalOptions="Center"/>
                     <DatePicker x:Name="SelectorFecha"
                         MinimumDate="02, 14, 1999"
+                        MaximumDate="{x:Static sys:DateTime.Now}"
                         Date="{Binding Path=Valor_fecha}"
                         Margin="30, 0, 0, 30"
                         DateSelected="CovertirFecha" />

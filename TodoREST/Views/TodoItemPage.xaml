@@ -4,7 +4,34 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
 			 x:Class="TodoREST.TodoItemPage" 
 			 Title="{Binding Nombre}">
-    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilo del selector de la puntuación-->
+            <Style TargetType="Slider">
+                <Setter Property="MaximumTrackColor" Value="Black"/>
+                <Setter Property="MinimumTrackColor" Value="{Binding Puntuacion_Color}"/>
+                <Setter Property="ThumbColor" Value="{Binding Puntuacion_Color}"/>
+                <Setter Property="Minimum" Value="0"/>
+                <Setter Property="Maximum" Value="100"/>
+            </Style>
+            <!-- Estilo del selector de la fecha-->
+            <Style TargetType="DatePicker">
+                <Setter Property="MinimumDate" Value="02, 14, 1999"/>
+                <Setter Property="MaximumDate" Value="{x:Static sys:DateTime.Now}"/>
+                <Setter Property="Margin" Value="30, 0, 0, 30"/>
+            </Style>
+            <!-- Estilo de la puntuación-->
+            <Style TargetType="Label" x:Key="txtPuntuacion">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Text" Value="{Binding Path=Puntuacion}"/>
+                <Setter Property="TextColor" Value="{Binding Puntuacion_Color}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+	
     <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
             ColumnDefinitions="1*"
             Padding="6">
@@ -37,12 +64,8 @@
 
             <StackLayout Grid.Column="1">
                 <Label Text="Fecha de lanzamiento" HorizontalOptions="Center"/>
-                <DatePicker x:Name="SelectorFecha"
-                    MinimumDate="02, 14, 1999"
-                    MaximumDate="{x:Static sys:DateTime.Now}"
-                    Date="{Binding Path=Valor_fecha}"
-                    Margin="30, 0, 0, 30"
-                    DateSelected="CovertirFecha" />
+                <DatePicker Date="{Binding Path=Valor_fecha}"
+                            DateSelected="CovertirFecha" />
                     
             </StackLayout>
                 
@@ -51,9 +74,9 @@
 
         <Grid Grid.Row="3">
             <Label Grid.Row="0" Text="Puntuación" HorizontalOptions="Center"/>
-            <Label Grid.Row="1" Text="{Binding Path=Puntuacion}" HorizontalOptions="Center" FontSize="Medium" TextColor="{Binding Puntuacion_Color}" FontAttributes="Bold"/>
-            <Slider Grid.Row="2" Minimum="0" Maximum="100" ValueChanged="RegPuntucion"
-                    Value="{Binding Path=Puntuacion_Double}" ThumbColor="{Binding Puntuacion_Color}" MaximumTrackColor="Black" MinimumTrackColor="{Binding Puntuacion_Color}"/>
+            <Label Grid.Row="1" Style="{StaticResource txtPuntuacion}"/>
+            <Slider Grid.Row="2" ValueChanged="RegPuntucion"
+                    Value="{Binding Path=Puntuacion_Double}"/>
         </Grid>
 
         <Grid Grid.Row="6">

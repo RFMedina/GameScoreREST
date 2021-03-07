@@ -12,6 +12,20 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilo de la puntuación-->
+            <Style TargetType="Label" x:Key="txtPuntuacion">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="Text" Value="{Binding Puntuacion}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ListView x:Name="listView" 
               Margin="0" 
               ItemSelected="OnItemSelected" HasUnevenRows="True" SeparatorVisibility="None">
@@ -32,7 +46,7 @@
                         <Frame CornerRadius="5"  Grid.Row="0"  Grid.Column="2"
                                 BackgroundColor="{Binding Puntuacion_Color}"
                                Padding="0" >
-                            <Label Text="{Binding Puntuacion}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" TextColor="White"/>
+                            <Label Style="{StaticResource txtPuntuacion}"/>
                         </Frame>
 
                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Fecha}" VerticalOptions="End" FontAttributes="Italic"/>

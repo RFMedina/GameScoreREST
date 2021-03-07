@@ -73,7 +73,7 @@ namespace TodoAPI.Services
                 Puntuacion_Color = "Green",
                 Sinopsis = "Cinco años después de su peligroso viaje a través de los Estados Unidos después de la pandemia, Ellie y Joel se establecieron en Jackson, Wyoming. Vivir entre una próspera comunidad de supervivientes ha permitido ... ",
                 Fecha = "19/06/2020",
-                Plataforma = "PS",
+                Plataforma = "PlayStation",
                 Plataforma_Img = "PSLogo.png"
 
             }; 

@@ -19,18 +19,37 @@ namespace TodoREST
 			var todoItem = (TodoItem)BindingContext;
 			await App.TodoManager.SaveTaskAsync (todoItem, isNewItem);
 			await Navigation.PopAsync ();
+
+			if (todoItem.Nombre != null && todoItem.Puntuacion != null)
+			{
+				string mensaje = "Se ha guardado con éxito";
+				DependencyService.Get<IMessage>().ShortAlert(mensaje);
+            }
+            else
+            {
+				string mensaje = "No se ha guardado el registro";
+				DependencyService.Get<IMessage>().ShortAlert(mensaje);
+			}
 		}
 
 		async void OnDeleteButtonClicked (object sender, EventArgs e)
 		{
 			var todoItem = (TodoItem)BindingContext;
-			await App.TodoManager.DeleteTaskAsync (todoItem);
-			await Navigation.PopAsync ();
-		}
 
-		async void OnCancelButtonClicked (object sender, EventArgs e)
-		{
-			await Navigation.PopAsync ();
+			bool res = await DisplayAlert("Atención", "¿Seguro que desea borrar el registro?", "Si", "No");
+
+			if (res == true)
+            {
+				await App.TodoManager.DeleteTaskAsync(todoItem);
+				await Navigation.PopAsync();
+
+				if (todoItem.Nombre != null && todoItem.Puntuacion != null)
+				{
+					string mensaje = "Se ha borrado con éxito";
+					DependencyService.Get<IMessage>().ShortAlert(mensaje);
+				}
+			}
+
 		}
 
         private void CovertirFecha(object sender, DateChangedEventArgs e)

@@ -8,7 +8,7 @@ Producto:
 ---
 # GameScoreREST
 
-Este ejemplo demuestra una aplicación Todo List en la que los datos se almacenan y acceden desde un servicio web REST. El código del servicio web está en el proyecto TodoAPI.
+Este ejemplo muestra una aplicación Todo List en la que los datos se almacenan y acceden desde un servicio web REST. El código del servicio web está en el proyecto TodoAPI.
 
 La funcionalidad de la aplicación es:
 

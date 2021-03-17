@@ -1,25 +1,21 @@
 ---
-name: Xamarin.Forms - TodoREST
-description: This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service.
-page_type: sample
-languages:
-- csharp
-products:
-- xamarin
-urlFragment: webservices-todorest
+Nombre: GameScoreREST
+Descripción: Esto es un proyecto que coge el diseño de Metacritic para hacer una aplicación de servicio en REST
+Lenguaje:
+- C#
+Producto:
+- Xamarin
 ---
-# TodoREST
+# GameScoreREST
 
-This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service. The web service code is in the TodoAPI project.
+Este ejemplo demuestra una aplicación Todo List en la que los datos se almacenan y acceden desde un servicio web REST. El código del servicio web está en el proyecto TodoAPI.
 
-The app functionality is:
+La funcionalidad de la aplicación es:
 
-- View a list of tasks.
-- Add, edit, and delete tasks.
-- Set a task's status to 'done'.
+- Ver la lista de elementos en la pantalla principal.
+- Añadir, editar y eliminar los objetos.
+- Asignar un título, una descripción, una plataforma, una fecha de lanzamiento y una nota al objeto.
 
-In all cases the tasks are stored in an in-memory collection that's accessed through a RESTful web service.
+En todos los casos, las tareas se almacenan en una colección en memoria a la que se accede a través de un servicio web REST.
 
-For more information about the sample see [Consuming a RESTful Web Service](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/rest).
-
-![TodoREST application screenshot](Screenshots/01All.png "TodoREST application screenshot")
+![GameRest](https://user-images.githubusercontent.com/54630937/111477477-715c0200-872f-11eb-96ad-2b5815cb4a91.png)
